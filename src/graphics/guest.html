@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>frame</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="main.css" rel="stylesheet">
+
+        <style>
+            .bg-clip {
+                -webkit-clip-path: polygon(32% 0, 38% 100%, 68% 100%, 62% 0);
+                    clip-path: polygon(32% 0, 38% 100%, 68% 100%, 62% 0);
+            }
+        </style>
+    </head>
+    <body class="w-screen h-screen overflow-hidden">
+        <!--template-->
+        <div id="template" class="hidden">
+            <div id="chat-template" class="pt-2 flex flex-col items-start z-10">
+                <div id="chat-author" class="font-jp text-gray-700 text-base font-bold drop-shadow-lg">test</div>
+                <div class="rounded-t-2xl rounded-br-2xl p-2 bg-slate-50 shadow">
+                    <span id="chat-content" class="font-chat font-bold text-lg leading-tight line-clamp-3">test</span>
+                </div>
+            </div>
+        </div>
+        <!--background-->
+        <div class="bg-clip">
+            <div class="w-screen h-screen bg-slate-300/75 flex flex-col px-[32vw] py-4 gap-2">
+                <div class="pr-[6vw] py-2 pl-2 rounded-l-md self-end text-3xl keyvalue clock">
+                    <div class="mdi mdi-clock-outline"></div>
+                    <div id="clock" class="font-jp font-medium">00:00:00</div>
+                </div>
+                <div class="pl-[1vw] py-2 pr-2 max-w-[30vw] overflow-hidden rounded-r-md self-start bg-cyan-200 shadow-lg text-2xl flex-nowrap keyvalue">
+                    <div class="mdi mdi-account text-4xl"></div>
+                    <div class="font-bold font-jp text-nowrap">
+                        <span id="guest" class="text-5xl"></span>さん
+                    </div>
+                </div>
+                <div class="mt-4 pl-[1.3vw] h-32 bg-indigo-300 shadow-lg">
+                    <span class="mdi mdi-microphone text-4xl"></span>    
+                </div>
+                <div class="grow min-h-0 relative bg-rose-300 shadow-lg">
+                    <div class="pl-[2.3vw]">
+                        <span class="mdi mdi-chat text-4xl"></span>
+                    </div>
+                    <div id="chat" class="absolute left-[2vw] top-0 pl-[3vw] w-[30vw] h-full min-h-0 overflow-hidden">
+                    </div>
+                </div>
+                <div class="mt-4 pl-[6vw] py-2 pr-2 w-[32vw] rounded-r-md self-start keyvalue playback">
+                    <div id="status" class="mdi mdi-music-off text-2xl"></div>
+                    <div id="playback-text" class="font-jp font-medium self-start">
+                        <div id="artist" class="line-clamp-1">Stopped</div>
+                        <div id="track" class="line-clamp-1 pt-2">Test</div>
+                    </div>
+                </div>
+                <div class="h-[8vh] pl-[6vw] flex flex-row justify-end items-between">
+                    <div class="pr-2 flex flex-col justify-center items-start font-medium flex-wrap align-middle">
+                        <div class="keyvalue text-xl">
+                            <span class="mdi mdi-twitter"></span>
+                            <spam id="guest-twitter" class="font-jp align-middle">@munmun_w</spam>
+                        </div>
+                        <div class="keyvalue text-xl">
+                            <span class="mdi mdi-youtube"></span>
+                            <spam id="guest-youtube" class="font-jp align-middle">@munmun_w</spam>
+                        </div>
+                    </div>
+                    <div class="grow pl-1 border-l border-gray-500 flex flex-col justify-center items-start font-medium flex-wrap align-middle">
+                        <div class=" keyvalue text-xl">
+                            <span class="mdi mdi-twitter"></span>
+                            <spam id="twitter" class="font-jp align-middle">@hakutei_alpha</spam>
+                        </div>
+                        <div class="keyvalue text-xl">
+                            <span class="mdi mdi-youtube"></span>
+                            <spam id="youtube" class="font-jp align-middle">@hakutei_alpha</spam>
+                        </div>
+                    </div>
+                    <img src="./local/alpha_logo_1.png" class="block mr-[0.5vw] max-h-full">
+                </div>
+            </div>
+        </div>
+        <!--forground-->
+        <div class="live keyvalue left-[28vw]">
+            <div class="mdi mdi-video text-red-600 text-3xl"></div>
+            <div class="font-jp font-bold">Live</div>
+        </div>
+        <!--script-->
+        <script type="module" src="./common.ts"></script>
+        <script type="module" src="./chat_talk.ts"></script>
+        <script type="module" src="./guest.ts"></script>
+    </body>
+</html>

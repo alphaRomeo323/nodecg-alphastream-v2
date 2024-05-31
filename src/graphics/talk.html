@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>frame</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="main.css" rel="stylesheet">
+        <style>
+            .bg-clip {
+                -webkit-clip-path: polygon(0 0, 0 100%, 40% 100%, 30% 0);
+                    clip-path: polygon(0 0, 0 100%, 40% 100%, 30% 0);
+            }
+        </style>
+    </head>
+    <body class="w-screen h-screen overflow-hidden">
+        <!--template-->
+        <div id="template" class="hidden">
+            <div id="chat-template" class="pb-2 flex flex-col items-start">
+                <div id="chat-author" class="font-jp text-gray-700 text-base font-bold drop-shadow-lg">test</div>
+                <div class="rounded-t-2xl rounded-br-2xl p-2 bg-slate-50 shadow">
+                    <span id="chat-content" class="font-chat font-bold text-lg leading-tight line-clamp-3">test</span>
+                </div>
+            </div>
+        </div>
+        <!--background-->
+        <div class="bg-clip">
+            <div class="w-screen h-screen bg-slate-300/75 flex flex-col pr-[60vw] py-4 gap-2">
+                <div class="px-2 rounded-r-md self-start justify-start clock keyvalue">
+                    <div class="mdi mdi-clock-outline"></div>
+                    <div id="clock" class="font-jp font-medium">00:00:00</div>
+                </div>
+                <div class="mt-4 pr-[8vw] pl-2 h-32 bg-blue-300 shadow-lg">
+                    <div class="mdi mdi-text-long text-4xl"></div>
+                    <div id="memo"class="font-jp text-4xl font-bold line-clamp-2"></div> 
+                </div>
+                <div class="grow min-h-0 pr-[8vw] bg-rose-300 shadow-lg flex flex-col items-stretch justify-start">
+                    <div class="pl-2 mdi mdi-chat text-4xl"></div>
+                    <div id="chat" class="pl-2 grow h-full min-h-0 overflow-hidden">
+                    </div>
+                </div>
+                <div class="mt-4 pl-2 w-[35vw] rounded-r-md self-start keyvalue playback">
+                    <div id="status" class="mdi mdi-music-off text-2xl"></div>
+                    <div id="playback-text" class="font-jp font-medium self-start">
+                        <div id="artist" class="line-clamp-1">Stopped</div>
+                        <div id="track" class="line-clamp-1 pt-2">Test</div>
+                    </div>
+                </div>
+                <div class="h-[8vh] flex flex-row justify-end items-between">
+                    <div class="grow pl-2 flex flex-col justify-center items-start font-medium flex-wrap align-middle">
+                        <div class="keyvalue text-xl">
+                            <span class="mdi mdi-twitter"></span>
+                            <spam id="twitter" class="font-jp align-middle">@hakutei_alpha</spam>
+                        </div>
+                        <div class="keyvalue text-xl">
+                            <span class="mdi mdi-youtube"></span>
+                            <spam id="youtube" class="font-jp align-middle">@hakutei_alpha</spam>
+                        </div>
+                        <div class="keyvalue text-xl">
+                            <span class="mdi mdi-twitch"></span>
+                            <spam id="twitch" class="font-jp align-middle">alphaRomeo323</spam>
+                        </div>
+                        <div class="keyvalue text-xl">
+                            <span class="mdi mdi-web"></span>
+                            <spam id="web" class="font-jp align-middle">blog.hakuteialpha.com</spam>
+                        </div>
+                    </div>
+                    <img src="./local/alpha_logo_1.png" class="block mr-[2vw] max-h-full">
+                </div>
+            </div>
+        </div>
+        <!--forground-->
+        <div class="absolute top-0 left-[28vw] live keyvalue">
+            <div class="mdi mdi-video text-red-600 text-3xl"></div>
+            <div class="font-jp font-bold">Live</div>
+        </div>
+        <!--script-->
+        <script type="module" src="./common.ts"></script>
+        <script type="module" src="./chat_talk.ts"></script>
+    </body>
+</html>

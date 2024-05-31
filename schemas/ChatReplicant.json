@@ -1,0 +1,22 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"author":{
+			"type":"string"
+		},
+		"avatar":{
+			"type":"string"
+		},
+		"platform":{
+			"type":"string",
+			"enum": ["youtube", "twitch"]
+		},
+		"message":{
+			"type": ["string", "array"]
+		}
+
+	},
+	"additionalProperties": false,
+	"required":["author","platform","message"]
+}

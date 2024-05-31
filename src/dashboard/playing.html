@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+		<style>
+			.monospace {
+				font-family: monospace;
+			}
+			#root{
+				flex: 1;
+				flex-direction: column;
+				height: 8rem;
+				overflow: hidden;
+			}
+			#title{
+				font-weight: 700;
+				font-size: large;
+			}
+			.flex-item{
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<div class="flex-item">
+				<span id="state" class="material-icons">
+				</span>
+			</div>
+			<div class="flex-item">
+				<span id="title">
+				</span>
+			</div>
+			<div class="flex-item">
+				<span id="artist">
+				</span>
+			</div>
+			<div class="flex-item">
+				<span id="album">
+				</span>
+			</div>
+			<div>
+				<input type="checkbox" name="enableGameBGM" id="gameBGM">
+				<label for="enableGameBGM">ゲームBGMモード</label>
+			</div>
+		</div>
+		<script type="module" src="./playing.ts"></script>
+	</body>
+</html>

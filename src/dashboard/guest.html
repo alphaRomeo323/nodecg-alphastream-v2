@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
+        <style>
+            @tailwind base;
+            @tailwind components;
+            @tailwind utilities;
+        </style>
+    </head>
+    <body>
+        <div class="root p-4">
+            <ul id="guest-list">
+                <li class="pl-4 mt-4 border-l border-gray-500">
+                    <section class="">
+                        <span class="mdi mdi-account"></span>
+                        <input type="text" name="guest" id="guest" size="20" class="rounded-sm text-black">
+                    </section>
+                    <section class="pt-2">
+                        <span class="mdi mdi-twitter"></span>
+                        @
+                        <input type="text" name="twitter" id="twitter" size="18" class="rounded-sm text-black">
+                    </section>
+                    <section class="pt-2">
+                        <span class="mdi mdi-youtube"></span>
+                        @
+                        <input type="text" name="youtube" id="youtube" size="18" class="rounded-sm text-black">
+                    </section>
+                </li>
+            </ul>
+            <div class="pt-3">
+                <button id="add" class="rounded-md bg-gray-300 text-black px-2 shadow active:shadow-none active:bg-gray-400">add</button>
+                <button id="remove" class="rounded-md bg-gray-300 text-black px-2 shadow active:shadow-none active:bg-gray-400">remove</button>
+                <button id="apply" class="rounded-md bg-gray-300 text-black px-2 py-1 shadow active:shadow-none active:bg-gray-400 text-xl font-bold">Apply</button>
+            </div>
+        </div>
+        <!--WIP-->
+        <div class="hidden">
+            <li id="guest-temp" class="pl-4 mt-4 border-l border-gray-500">
+                <section class="">
+                    <span class="mdi mdi-account"></span>
+                    <input type="text" name="guest" size="20" class="rounded-sm text-black">
+                </section>
+                <section class="pt-2">
+                    <span class="mdi mdi-twitter"></span>
+                    @
+                    <input type="text" name="twitter" size="18" class="rounded-sm text-black">
+                </section>
+                <section class="pt-2">
+                    <span class="mdi mdi-youtube"></span>
+                    @
+                    <input type="text" name="youtube" size="18" class="rounded-sm text-black">
+                </section>
+            </li>
+        </div>
+        <script src="./guest.ts" type="module"></script>
+    </body>
+</html>

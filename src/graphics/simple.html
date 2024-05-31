@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>frame</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="main.css" rel="stylesheet">
+        <style>
+            .text-border{
+                -webkit-text-stroke: 1px #000;
+            }
+        </style>
+    </head>
+    <body class="relative w-screen h-screen overflow-hidden">
+        <div id="template" class="hidden">
+            <div id="chat-template" class="pb-2 flex flex-col items-start">
+                <div id="chat-author" class="font-jp text-white text-base font-extrabold drop-shadow-lg text-border">test</div>
+                <div class="rounded-t-2xl rounded-br-2xl p-2 bg-slate-50 shadow">
+                    <span id="chat-content" class="font-chat font-bold text-lg leading-tight line-clamp-3">test</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute top-2 right-0 px-2 rounded-l-md clock keyvalue justify-end">
+            <div class="mdi mdi-clock-outline"></div>
+            <div id="clock" class="font-jp font-medium">00:00:00</div>
+        </div>
+        <div class="absolute bottom-2 left-0 w-1/4 px-2 rounded-r-md self-start keyvalue playback">
+            <div id="status" class="mdi mdi-music-off text-2xl"></div>
+            <div id="playback-text" class="font-jp font-medium self-start">
+                <div id="artist" class="line-clamp-1">Stopped</div>
+                <div id="track" class="line-clamp-1 pt-2">Test</div>
+            </div>
+        </div>
+        <div id="chat" class="absolute bottom-14 left-0 pl-2 max-h-1/8 max-w-1/4 align-bottom">
+        </div>
+        <script type="module" src="./common.ts"></script>
+        <script type="module" src="./single_comment.ts"></script>
+    </body>
+</html>

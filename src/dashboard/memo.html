@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet" />
+        <style>
+            @tailwind base;
+            @tailwind components;
+            @tailwind utilities;
+        </style>
+    </head>
+    <body>
+        <div class="root p-4">
+            <div>
+                <input type="text" name="memo" id="memo" size="36" class="rounded-sm text-black">
+            </div>
+            <div class="pt-3">
+                <button id="apply" class="rounded-md bg-gray-300 text-black px-2 py-1 shadow active:shadow-none active:bg-gray-400 text-xl font-bold">Apply</button>
+            </div>
+        </div>
+        <script src="./memo.ts" type="module"></script>
+    </body>
+</html>
