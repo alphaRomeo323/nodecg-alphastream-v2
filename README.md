@@ -1,4 +1,4 @@
-# nodecg-ddcc
+# nodecg-alphastream-v2
 
 nodecg-ddcc is a [NodeCG](http://github.com/nodecg/nodecg) bundle.
 It works with NodeCG versions which satisfy this [semver](https://docs.npmjs.com/getting-started/semantic-versioning) range: `^2.0.0`
