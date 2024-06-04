@@ -73,7 +73,14 @@
         "width": 1920,
         "height": 1080,
         "singleInstance": false
+      },
+      {
+        "file": "valorant.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
       }
+
     ]
   },
   "browserslist": {
