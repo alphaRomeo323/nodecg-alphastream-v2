@@ -1,19 +1,16 @@
 @import url(https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css);
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Color+Emoji&family=Noto+Serif+JP:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Color+Emoji&family=Yusei+Magic&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-    font-family: "851手書き雑フォント";
-    src: url(./local/851tegaki_zatsu_normal_0883.ttf);
-}
-
 
 .font-jp {
     font-family: "M PLUS Rounded 1c", sans-serif;
 }
 .font-chat{
-    font-family: "851手書き雑フォント", "Noto Color Emoji", serif;
+    font-family: "Yusei Magic", "Noto Color Emoji", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .clock{
@@ -28,4 +25,7 @@
 
 .keyvalue{
     @apply flex flex-row justify-start items-center gap-1 align-middle;
+}
+.text-shadow{
+    text-shadow: 0 10px 10px #00000040
 }

@@ -20,6 +20,17 @@
   ],
   "nodecg": {
     "compatibleRange": "^2.0.0",
+    "assetCategories": [
+      {
+        "name": "animes",
+        "title": "Animations",
+        "allowedTypes": [
+          "gif",
+          "png",
+          "apng"
+        ]
+      }
+    ],
     "dashboardPanels": [
       {
         "name": "guest",
@@ -53,7 +64,6 @@
         "workspace": "VStream",
         "headerColor": "#525F78"
       }
-
     ],
     "graphics": [
       {
@@ -79,8 +89,13 @@
         "width": 1920,
         "height": 1080,
         "singleInstance": false
+      },
+      {
+        "file": "wait.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
       }
-
     ]
   },
   "browserslist": {
@@ -113,6 +128,8 @@
     "@parcel/core": "*",
     "@parcel/reporter-cli": "*",
     "@parcel/validator-typescript": "*",
+    "@tsparticles/engine": "^3.5.0",
+    "@tsparticles/slim": "^3.5.0",
     "@types/animejs": "^3.1.12",
     "@types/node": "^18",
     "animejs": "^3.2.2",

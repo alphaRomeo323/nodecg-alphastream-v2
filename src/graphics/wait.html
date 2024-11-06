@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>queue</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body class="w-screen h-screen overflow-hidden bg-yellow-800">
+        <div class="px-28 py-20 w-full h-full">
+            <div class="relative size-full bg-orange-300 rounded-3xl shadow-inner-lg shadow-red-950 overflow-hidden flex justify-center items-center flex-col gap-8">
+                <div class="absolute w-full h-full" id="tsparticles"></div>
+                <div class="max-h-[32rem] max-w-full">
+                    <img id="anime-img" class="h-96 drop-shadow-3xl">
+                </div>
+                <div class="text-8xl text-amber-950 font-chat text-shadow">
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script type="module" src="./common.ts"></script>
+        <script type="module" src="./wait.ts"></script>
+        
+    </body>
+</html>
