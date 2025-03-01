@@ -1,5 +1,7 @@
 import anime from "animejs/lib/anime.es"
-import type { ChatReplicant, EmojiItem } from '../types/schemas';
+import { ChatReplicant } from "../types/schemas/ChatReplicant";
+import { EmojiItem } from "../types/schemas/EmojiItem";
+
 
 //Replicant
 const chatRep = nodecg.Replicant<ChatReplicant>("chat", "nodecg-livechat");

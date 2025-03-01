@@ -29,6 +29,13 @@
           "png",
           "apng"
         ]
+      },
+      {
+        "name": "particles",
+        "title": "Particle JSONs",
+        "allowedTypes": [
+          "json"
+        ]
       }
     ],
     "dashboardPanels": [
@@ -63,6 +70,14 @@
         "file": "memo.html",
         "workspace": "VStream",
         "headerColor": "#525F78"
+      },
+      {
+        "name": "editor",
+        "title": "Editor",
+        "width": 4,
+        "file": "particle_editor.html",
+        "workspace": "Particles",
+        "headerColor": "#525F78"
       }
     ],
     "graphics": [
@@ -95,6 +110,12 @@
         "width": 1920,
         "height": 1080,
         "singleInstance": false
+      },
+      {
+        "file": "particle.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
       }
     ]
   },
@@ -123,7 +144,7 @@
     "ts-node": "*"
   },
   "devDependencies": {
-    "@nodecg/types": "^2.0.0",
+    "@nodecg/types": "~2.3.0",
     "@parcel/config-default": "*",
     "@parcel/core": "*",
     "@parcel/reporter-cli": "*",

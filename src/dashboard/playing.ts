@@ -1,4 +1,4 @@
-import type { PlaybackReplicant } from '../types/schemas';
+import type { PlaybackReplicant } from '../types/schemas/playbackReplicant';
 
 
 //Rep

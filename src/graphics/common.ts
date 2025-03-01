@@ -1,5 +1,5 @@
 import anime from "animejs/lib/anime.es"
-import type { PlaybackReplicant } from '../types/schemas';
+import type { PlaybackReplicant } from '../types/schemas/playbackReplicant';
 
 //Replicant
 const playbackRep = nodecg.Replicant<PlaybackReplicant>("playback","nodecg-playback");

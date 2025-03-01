@@ -1,5 +1,5 @@
 import type NodeCG from '@nodecg/types';
-import { GuestReplicant } from '../types/schemas'
+import { GuestReplicant } from '../types/schemas/GuestReplicant'
 
 module.exports = function (nodecg: NodeCG.ServerAPI) {
 	//rep Initialize

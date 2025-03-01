@@ -1,4 +1,4 @@
-import { GuestReplicant } from "../types/schemas";
+import { GuestReplicant } from "../types/schemas/GuestReplicant";
 
 
 //Replicant
